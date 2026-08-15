@@ -65,7 +65,7 @@ chrome.storage.local.get("filters", ({ filters = [] }) => {
         return;
     }
 
-    console.log(filters.join("\n"));
+    console.log(filters.map(url => `"${url}"`).join(",\n"));
 });
 ```
 
